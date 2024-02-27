@@ -93,9 +93,11 @@ class Animal{
         echo "<br>";
     }
 }
-
+// Modifique a classe 'Cachorro' do exercício anterior.
+// Torne as propriedades 'nome' e 'idade' protegidas e utilize métodos getters e setters para acessá-las e modificá-las.
 class Cachorro extends Animal{
-    private $idade;
+    protected $idade;
+    protected $nome;
 
 }
 
@@ -103,4 +105,20 @@ $cachorro = new Cachorro("Celso","22");
 $cachorro->setNome("Marsio");
 $cachorro->setIdade("55");
 $cachorro->exibirInfoAnimal();
+echo "<br>";
+echo "<hr>";
+?>
+
+<?php
+// Crie uma classe chamada 'Calculadora' com um método estático chamado 'soma' que recebe dois números e retorna a soma.
+// Não é necessário instanciar a classe para utilizar o método 'soma'.
+// Demonstre a utilização deste método.
+class Calculadora{
+    public static function soma($num1,$num2){
+        return $num1 +$num2;
+    }
+
+}
+$resultado = Calculadora::soma("2","7");
+echo "Resultado da soma:".  $resultado."<br>";
 ?>
